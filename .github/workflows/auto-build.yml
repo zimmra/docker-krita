@@ -96,7 +96,6 @@ jobs:
         with:
           context: .
           file: ${{ matrix.dockerfile }}
-          platforms: ${{ matrix.platform }}
           push: true
           tags: |
             ${{ env.DOCKER_REPO }}:${{ needs.check-version.outputs.latest_version }}-${{ matrix.architecture }}
